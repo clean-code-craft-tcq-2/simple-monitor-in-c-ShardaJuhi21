@@ -43,9 +43,8 @@ int batteryIsOk(float temp,float soc, void (*fpPrint)(char *),float (*fpCheckTem
     int printCount = 0;
 
 //stub
-char StringName[15] = "StubString";
+
 void stubprintToConsole(char *StringName){
-   char LocalStringName[15] = StringName;
    printCount++;
 }
 
