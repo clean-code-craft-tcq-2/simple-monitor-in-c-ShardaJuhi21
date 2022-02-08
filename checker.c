@@ -69,7 +69,7 @@ int main() {
  result =batteryIsOk(25,85,printToConsole,checkTemp,checkChargeRate);
   printf("%d\n", result);
  // test
- assert(batteryIsOk(50,85,pstubrintToConsole,stubcheckTemp,stubcheckChargeRate));
+ assert(batteryIsOk(50,85,stubprintToConsole,stubcheckTemp,stubcheckChargeRate));
   //assert(batteryIsOk(50,85,printToConsole,checkTemp));
 //   assert(batteryIsOk(25, 70, 0.7));
 //   assert(!batteryIsOk(50, 85, 0));
