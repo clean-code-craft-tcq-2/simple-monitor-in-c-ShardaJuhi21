@@ -27,7 +27,7 @@ void checkChargeRate(float ChargeRate,void (*fpPrint)(char *)){
 }
 
 
-int batteryIsOk(float temp,float soc, void (*fpPrint)(char *),float (*fpCheckTemp)(float , void (fpPrint)(char * )), void *(fpCheckChargeRate)(float ChargeRate,void (fpPrint)(char * )) ) {
+int batteryIsOk(float temp,float soc, void (*fpPrint)(char *),float (*fpCheckTemp)(float , void (fpPrint)(char * )), void (fpCheckChargeRate)(float ChargeRate,void (fpPrint)(char * )) ) {
   char StringeName[15] = "Soc";
  if(soc < 20 || soc > 80) {
   float temperature = temp;
