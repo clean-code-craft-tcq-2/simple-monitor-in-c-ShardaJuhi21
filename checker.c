@@ -39,14 +39,15 @@ float checkTemp(float temp , void (*fpPrint)(char *)){
 // }
 
 
-int batteryIsOk(float temp,void (*fpPrint)(char *),float (*fpCheckTemp)(float , void (fpPrint)(char * )) ) {
-  char StringeName[15] = "ChargeRate";
-  float temperature = temp;
+int batteryIsOk(float temp,float soc, void (*fpPrint)(char *),float (*fpCheckTemp)(float , void (fpPrint)(char * )) ) {
+  char StringeName[15] = "Soc";
+ if(soc < 20 || soc > 80) {
+      float temperature = temp;
   float ChargeRate = fpCheckTemp(temperature , fpPrint);
     fpPrint(StringeName);
     return 0;
   }
- 
+
   return 1;
   
 }
@@ -54,7 +55,7 @@ int batteryIsOk(float temp,void (*fpPrint)(char *),float (*fpCheckTemp)(float , 
 
 
 int main() {
-  assert(batteryIsOk(50,printToConsole,checkTemp));
+  assert(batteryIsOk(50,70,printToConsole,checkTemp));
 //   assert(batteryIsOk(25, 70, 0.7));
 //   assert(!batteryIsOk(50, 85, 0));
 }
