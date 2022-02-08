@@ -15,7 +15,7 @@ float checkTemp(float temp , void (*fpPrint)(char *)){
     fpPrint(StringeName);
     return chargeRate;
   }
-  return 1;
+  return 0;
 }
 
 void checkChargeRate(float ChargeRate,void (*fpPrint)(char *)){
