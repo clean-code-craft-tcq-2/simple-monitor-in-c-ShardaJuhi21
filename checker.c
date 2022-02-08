@@ -8,9 +8,10 @@ printf("%s out of range!\n", StringeName);
 
 float checkTemp(float temp , void (*fpPrint)(char *)){
  char StringeName[15] = "Temperature";
-  float chargeRate=0.8;
+  float chargeRate;
  float temperature = temp;
  if(temperature < 0 || temperature > 45) {
+    chargeRate = 0.8;
     fpPrint(StringeName);
     return chargeRate;
   }
