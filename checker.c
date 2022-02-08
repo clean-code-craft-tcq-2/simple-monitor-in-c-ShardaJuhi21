@@ -55,7 +55,9 @@ int batteryIsOk(float temp,float soc, void (*fpPrint)(char *),float (*fpCheckTem
 
 
 int main() {
-  assert(batteryIsOk(50,85,printToConsole,checkTemp));
+ result =batteryIsOk(50,85,printToConsole,checkTemp);
+ pprintf("%d", result);
+  //assert(batteryIsOk(50,85,printToConsole,checkTemp));
 //   assert(batteryIsOk(25, 70, 0.7));
 //   assert(!batteryIsOk(50, 85, 0));
 }
