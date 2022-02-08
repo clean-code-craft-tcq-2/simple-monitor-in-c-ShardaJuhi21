@@ -39,16 +39,14 @@ int batteryIsOk(float temp,float soc, void (*fpPrint)(char *),float (*fpCheckTem
   return 1; 
 }
 
-struct {
+
     int printCount = 0;
-    int unavailableSizeCount = 0;
-}Count;
 
 //stub
 char StringName[15] = "StubString";
 void stubprintToConsole(char *StringName){
-   LocalStringName[15] = StringName;
-   Count.printCount++;
+   char LocalStringName[15] = StringName;
+   printCount++;
 }
 
 float stubcheckTemp(float temp , void (*fpPrint)(char *)){
