@@ -17,16 +17,6 @@ float checkTemp(float temp , void (*fpPrint)(char *)){
   return 1;
 }
 
-// int checkSoc(float Soc,float temp, fpTemp(temp, fprint)){
-//   char StringeName[15] = "Soc";
-//  if(soc < 20 || soc > 80) {
-//     result = checkTemp(float , fpprint);
-//     fpprint(StringeName);
-//     return 0;
-//   } 
-//   return 1;
-// }
-
 void checkChargeRate(float ChargeRate,void (*fpPrint)(char *)){
   char StringeName[15] = "ChargeRate";
   float chargeRate = ChargeRate;
@@ -55,6 +45,8 @@ int batteryIsOk(float temp,float soc, void (*fpPrint)(char *),float (*fpCheckTem
 int main() {
  int result =batteryIsOk(50,85,printToConsole,checkTemp,checkChargeRate);
  printf("%d", result);
+ int result =batteryIsOk(25,85,printToConsole,checkTemp,checkChargeRate);
+  printf("%d", result);
   //assert(batteryIsOk(50,85,printToConsole,checkTemp));
 //   assert(batteryIsOk(25, 70, 0.7));
 //   assert(!batteryIsOk(50, 85, 0));
