@@ -64,12 +64,15 @@ void stubcheckChargeRate(float ChargeRate,void (*fpPrint)(char *)){
 }
 
 int main() {
- int result =batteryIsOk(50,85,printToConsole,checkTemp,checkChargeRate);
- printf("%d\n", result);
+ int result;
+ //int result =batteryIsOk(50,85,printToConsole,checkTemp,checkChargeRate);
+ //printf("%d\n", result);
  result =batteryIsOk(25,85,printToConsole,checkTemp,checkChargeRate);
   printf("%d\n", result);
  // test
- assert(batteryIsOk(50,85,stubprintToConsole,stubcheckTemp,stubcheckChargeRate));
+ result = batteryIsOk(50,85,stubprintToConsole,stubcheckTemp,stubcheckChargeRate);
+ printf("%d\n", result);
+ assert(printCount == 3);
   //assert(batteryIsOk(50,85,printToConsole,checkTemp));
 //   assert(batteryIsOk(25, 70, 0.7));
 //   assert(!batteryIsOk(50, 85, 0));
