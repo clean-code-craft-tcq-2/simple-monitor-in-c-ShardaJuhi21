@@ -39,7 +39,7 @@ float checkTemp(float temp , void (*fpPrint)(char *)){
 // }
 
 
-int batteryIsOk(float temp,void (*fpPrint)(char *),float (*fpCheckTemp)(float , void (fpPrint)(char * )) {
+int batteryIsOk(float temp,void (*fpPrint)(char *),float (*fpCheckTemp)(float , void (fpPrint)(char * )) ) {
   char StringeName[15] = "ChargeRate";
   float temperature = temp;
   float ChargeRate = fpCheckTemp(temperature , fpPrint);
